@@ -1,0 +1,155 @@
+@import url('https://fonts.cdnfonts.com/css/sunday-orange');
+@import url('https://fonts.cdnfonts.com/css/kennebunkport');
+
+* {
+    overflow: hidden;
+    font-family: 'Sunday Orange', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    height: 100vh;
+}
+
+#navBar {
+
+    margin-top: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding: 1rem 0 1rem 0;
+}
+
+#loginBtn:hover {
+    background-color: rgb(223, 223, 223);
+    border-color: rgb(223, 223, 223);
+    ;
+}
+
+.title {
+    font-family: 'Kennebunkport Bold', sans-serif;
+    font-size: 3em;
+    /*  
+    color: #441C6C;
+    color: #FF1DFF;
+     */
+    color: #672EEB;
+
+}
+
+.description {
+    color: #ffffff;
+}
+
+#links {
+    padding: 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 1vw;
+    list-style: none;
+
+}
+
+.btn {
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+}
+
+#information {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 1vh;
+    flex-direction: column;
+    color: white;
+    max-width: 60%;
+    background: none;
+}
+
+#mainSection {
+    margin-top: 12vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+
+@media (max-width: 768px) {
+    #mainSection {
+        margin-top: 6vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 4vh;
+    }
+
+    #information {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5vh;
+        text-align: center;
+        flex-direction: column;
+        color: white;
+        max-width: 60%;
+        background: none;
+    }
+}
+
+.margin-0 {
+    margin: 0px;
+}
+
+#banner {
+    background-image: url('../../public/img/opt6.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+.btnPlay {
+    padding: 2vh 4vw 2vh 4vw;
+    border-radius: 5px;
+    border: 1px transparent;
+    background-color: rgb(25, 9, 67);
+    color: rgb(255, 255, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.btnPlay:hover {
+    background-color: rgb(41, 14, 103);
+}
+
+#canvasFrame {
+    min-width: 350px;
+    min-height: 350px;
+}
+
+.frase {
+    color: #ffffff;
+    position: absolute;
+    top: 90%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    text-align: center;
+    min-width: 100%;
+}
+
+.no-select{
+    -webkit-user-select: none;
+    -ms-user-select: none; 
+    user-select: none;
+}
