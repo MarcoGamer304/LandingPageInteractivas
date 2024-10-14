@@ -1,10 +1,10 @@
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 const loader = new GLTFLoader();
-let objToRender = 'bedroom';
+
 let object;
 
-export function modelLoader(scene, renderer, canvasFrame) {
+export function modelLoader(scene, renderer, canvasFrame, objToRender) {
     loader.load(
         `models/${objToRender}/scene.gltf`,
         function (gltf) {
