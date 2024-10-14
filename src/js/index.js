@@ -34,8 +34,8 @@ loginForm.addEventListener('submit', (event) => {
     localStorage.setItem('username', inputUser.value);
     inputUser.value = '';
 
-    const inputPass = document.getElementById('input-login-pass')
-    localStorage.setItem('password', inputPass.value);
+   // const inputPass = document.getElementById('input-login-pass')
+    //localStorage.setItem('password', inputPass.value);
     inputPass.value = '';
 
     loginBtn.innerText = localStorage.getItem('username');
