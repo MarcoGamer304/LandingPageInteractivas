@@ -17,7 +17,8 @@ let currentSection = 0;
 let startY = 0;
 let onCanvas;
 
-
+localStorage.clear();
+loginBtn.innerText = localStorage.getItem('username') || 'Login';
 
 loginBtn.addEventListener('click', () => {
     loginModal.showModal();
@@ -30,7 +31,15 @@ loginClose.addEventListener('click', () => {
 loginForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
-   
+    const inputUser = document.getElementById('input-login-user')
+    localStorage.setItem('username', inputUser.value);
+    inputUser.value = '';
+
+    const inputPass = document.getElementById('input-login-pass')
+    localStorage.setItem('password', inputPass.value);
+    inputPass.value = '';
+
+    loginBtn.innerText = localStorage.getItem('username');
     loginModal.close();
 })
 
