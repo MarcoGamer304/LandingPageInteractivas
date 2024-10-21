@@ -44,7 +44,7 @@ loginForm.addEventListener('submit', (event) => {
 })
 
 playNow.addEventListener('click', () => {
-    window.location.href = 'http://localhost:3000/'
+    window.location.href = './game.html'
 })
 
 canvas.addEventListener('mouseover', () => {
