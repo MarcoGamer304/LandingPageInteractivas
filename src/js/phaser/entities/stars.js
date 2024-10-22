@@ -1,5 +1,5 @@
-import { updateScore } from './score.js';
 
+const points = document.getElementById('points');
 let score = 0;
 
 export function createStars(scene, platforms) {
@@ -20,8 +20,8 @@ export function createStars(scene, platforms) {
 export function collectStar(player, star, scene) {
     star.disableBody(true, true);
     score += 10;  
-    updateScore(scene.scoreText, score);
-    
+    points.innerText = score;
+
     if (scene.stars && scene.stars.countActive(true) === 0) {
         scene.stars.children.iterate(function (child) {
             child.enableBody(true, child.x, 0, true, true);
