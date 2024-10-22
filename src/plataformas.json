@@ -1,0 +1,79 @@
+{
+    "background": {
+      "x": 1600,
+      "y": 400,
+      "image": "fondoCueva"
+    },
+    "platforms": [
+      {
+        "x": 480,
+        "y": 770,
+        "image": "base"
+      },
+      {
+        "x": 1490,
+        "y": 460,
+        "image": "base"
+      },
+      {
+        "x": 20,
+        "y": 510,
+        "image": "bigWall"
+      },
+      {
+        "x": 60,
+        "y": 680,
+        "image": "brick2"
+      },
+      {
+        "x": 390,
+        "y": 680,
+        "image": "brick2"
+      },
+      {
+        "x": 555,
+        "y": 680,
+        "image": "brick2"
+      },
+      {
+        "x": 170,
+        "y": 630,
+        "image": "brick3"
+      },
+      {
+        "x": 230,
+        "y": 630,
+        "image": "brick3"
+      },
+      {
+        "x": 70,
+        "y": 530,
+        "image": "brick3"
+      },
+      {
+        "x": 130,
+        "y": 530,
+        "image": "brick3"
+      },
+      {
+        "x": 370,
+        "y": 530,
+        "image": "brick3"
+      },
+      {
+        "x": 430,
+        "y": 530,
+        "image": "brick3"
+      },
+      {
+        "x": 595,
+        "y": 430,
+        "image": "brick2"
+      },
+      {
+        "x": 820,
+        "y": 475,
+        "image": "brick3"
+      }
+    ]
+  }

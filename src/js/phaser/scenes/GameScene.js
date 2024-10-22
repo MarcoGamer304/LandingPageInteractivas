@@ -1,25 +1,25 @@
 import { createPlayer, updatePlayer } from '../entities/player.js';
 import { createStars, collectStar } from '../entities/stars.js';
-import { createBombs, hitBomb } from '../entities/bombs.js';
 
 let player;
 let stars;
-let bombs;
+
 const keyDictionary = new Set([]);
 
+import datos from '../../../plataformas.json';
 export default class GameScene extends Phaser.Scene {
     constructor() {
         super('GameScene');
     }
 
     create() {
-        this.add.image(400, 300, 'sky');
+        const levelData = datos;
+        this.add.image(levelData.background.x, levelData.background.y, levelData.background.image);
 
         const platforms = this.physics.add.staticGroup();
-        platforms.create(1000, 780, 'ground').setScale(5, 2).refreshBody();
-        platforms.create(600, 600, 'ground');
-        platforms.create(50, 450, 'ground');
-        platforms.create(750, 420, 'ground');
+        levelData.platforms.forEach(platform => {
+            platforms.create(platform.x, platform.y, platform.image).refreshBody();
+        });
 
         player = createPlayer(this, platforms);
 
@@ -28,14 +28,9 @@ export default class GameScene extends Phaser.Scene {
         this.cameras.main.startFollow(player);
 
         stars = createStars(this, platforms);
-        bombs = createBombs(this, platforms);
 
         this.physics.add.overlap(player, stars, (player, star) => {
             collectStar(player, star, this);
-        });
-
-        this.physics.add.collider(player, bombs, (player, bomb) => {
-            hitBomb(player, bomb, this);
         });
     }
 
